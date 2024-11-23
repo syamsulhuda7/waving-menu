@@ -1,0 +1,156 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: space-between;
+  &__content {
+    position: relative;
+    height: 100%;
+    // background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+    &__items {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      &:hover {
+        color: rgb(79, 71, 71); // Ubah warna icon saat hover
+      }
+
+      &__icon {
+        cursor: pointer;
+        z-index: 10;
+        position: absolute;
+        height: 100%;
+        width: 85px;
+        font-size: 40px;
+        background-color: #e1e1e1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.5);
+        // &:hover {
+        //   color: red;
+        // }
+        // padding: 0px 20px;
+      }
+      &__text {
+        cursor: pointer;
+        z-index: 1;
+        border-radius: 0px 10px 10px 0px;
+        position: absolute;
+        height: 100%;
+        width: 170px;
+        font-size: 20px;
+        font-weight: 500;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        background-color: rgb(150, 0, 0);
+        color: white;
+        //margin-left: 100px;
+        padding-left: 100px;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        transform: translateX(-70%);
+        // &:hover {
+        //   color: yellow;
+        // }
+        &__active {
+          animation: to-right ease-in-out forwards;
+          -webkit-animation: to-right ease-in-out forwards;
+        }
+        &__inactive {
+          animation: to-left ease-in-out forwards;
+          -webkit-animation: to-left ease-in-out forwards;
+        }
+      }
+      //   &:hover {
+      //     &__icon {
+      //       color: red; // Ubah warna icon saat hover
+      //     }
+
+      //     &__text {
+      //       color: green; // Ubah warna text saat hover
+      //       transform: translateX(0); // Contoh efek tambahan
+      //     }
+      //   }
+    }
+  }
+}
+
+.wide {
+  width: 280px;
+}
+.narrow {
+  width: 90px;
+}
+
+.active {
+  color: rgb(151, 0, 0);
+}
+
+.duration1 {
+  animation-duration: 400ms;
+}
+.duration2 {
+  animation-duration: 700ms;
+}
+.duration3 {
+  animation-duration: 975ms;
+}
+.duration4 {
+  animation-duration: 1225ms;
+}
+.duration5 {
+  animation-duration: 1450ms;
+}
+.duration6 {
+  animation-duration: 1650ms;
+}
+.duration7 {
+  animation-duration: 1825ms;
+}
+.duration8 {
+  animation-duration: 1975ms;
+}
+
+@keyframes to-right {
+  0% {
+    transform: translateX(-70%);
+    -webkit-transform: translateX(-70%);
+    -moz-transform: translateX(-70%);
+    -ms-transform: translateX(-70%);
+    -o-transform: translateX(-70%);
+  }
+  100% {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+  }
+}
+
+@keyframes to-left {
+  0% {
+    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-70%);
+    -webkit-transform: translateX(-70%);
+    -moz-transform: translateX(-70%);
+    -ms-transform: translateX(-70%);
+    -o-transform: translateX(-70%);
+  }
+}

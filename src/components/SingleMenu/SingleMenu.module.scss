@@ -1,0 +1,13 @@
+.container {
+  width: 790px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 440px;
+  &__content {
+    font-size: 50px;
+    font-weight: 700;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+}
